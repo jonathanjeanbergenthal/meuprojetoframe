@@ -27,7 +27,7 @@ and open the template in the editor.
         <p></p>
         <input class="btn" type="submit" value="Salvar"/>
         <input class="btn" type="reset" value="Limpar"/>
-        <?php form_close(); ?>
+        <?php form_close(); ?>  
         <p></p>
         <div>
             <table>
