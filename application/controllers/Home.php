@@ -6,52 +6,25 @@ class Home extends CI_Controller {
 
     function __construct() {
         parent::__construct();
-        $this->load->model('Contatos_model','contatos'); 
-        //contatos é um alias para o Contatos_model 
+        $this->load->model('Contatos_model', 'contatos');
+        //contatos Ã© um alias para o Contatos_model 
     }
 
     public function index() {
 //        $this->load->view('template/header');
-        $dados['acronico'] = "MPF";
-        $dados['completo'] = "Meu Projeto Framework";
+        $dados['acronico'] = "PF";
+        $dados['completo'] = "Projeto Frame";
         $dados['contatos'] = $this->contatos->listar();
         $this->load->view('home', $dados);
-//        $this->load->view('template/footer');
+//        ,$this->load->view('template/footer');
     }
-       public function inserir() {
-//        $this->load->view('template/header');
-        $dados['nome'] = $this->input->post('nome');
-        $dados['email'] = $this->input->post('email');
-        $this->contatos->inserir($dados);
-        redirect('home');
-       }
-    
-    
-    
-    public function excluir ($id) {
-        $this->contatos->deletar($id);
-        redirect('home'); 
-    }
-    public function editar ($id) {
 
-        $data['acronico'] = "MPF";
-        $data['completo'] = "Meu Projeto Framework";
-        $data['contatoEditar'] = $this->contatos->editar($id);
-         //        $this->load->view('template/heater');
-        $this->load->view('contatoEditar', $data);
-         
-//        $this->load->view('template/footer');
-       
-}
-  public function atualizar () {
-
-        $data['id'] = $this->input->post('id');
-        $data['nome'] = $this->input->post('nome');
-        $data['email'] = $this->input->post('email');
-         
-           $this->contatos->atualizar($data);
-           redirect('home');
-  }
+    
 }
 
-       
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
