@@ -26,5 +26,6 @@
         <?php form_close(); ?>
         <p></p>
         <a href="<?php echo base_url() .'contato';?>">Cancelar</a>
+        
     </body>
 </html>
