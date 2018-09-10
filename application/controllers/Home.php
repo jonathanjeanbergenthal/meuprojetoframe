@@ -11,15 +11,14 @@ class Home extends CI_Controller {
     }
 
     public function index() {
-//        $this->load->view('template/header');
+        $this->load->view('template/header');
         $dados['acronico'] = "PF";
         $dados['completo'] = "Projeto Frame";
         $dados['contatos'] = $this->contatos->listar();
         $this->load->view('home', $dados);
-//        ,$this->load->view('template/footer');
+        $this->load->view('template/footer');
     }
 
-    
     
 }
 
